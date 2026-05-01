@@ -1,12 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>New Visit Registration</h1>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Visita</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="form-contenedor">
+      <div class="encabezado">
+        <h1>New Visit Registration</h1>
+        <p>Documenting pastoral care and fellowship visits across the skate</p>
+      </div>
+      <div class="form-grid">
+        <div class="columna-izquierda">
+          <div class="card">
+            <h2 class="card-titulo">MEMBER INFORMATION</h2>
+
+            <div class="campo">
+              <label for="fullname">Full Name</label>
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Enter member name"
+              />
+            </div>
+            <div class="campo">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="street, city, postal core"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+1 (555) 000-0000"
+              />
+            </div>
+            <div class="card">
+              <h2 class="card-titulo">VISIT DETAILS</h2>
+              <div class="campo">
+                <label for="comments">Comments & Observations</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Describe the visit context,needs identified, or spiritual messages shared…"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columna-derecha">
+          <div class="card">
+            <h2 class="card-titulo">LOGISTICS</h2>
+
+            <div class="fila-doble">
+              <div class="campo">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <div class="campo">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" />
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="status">Visit Status</label>
+              <select id="status" name="status">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="registrar">Registrar Name</label>
+              <input
+                type="text"
+                id="registrar"
+                name="registrar"
+                placeholder="Full name of registrar"
+              />
+            </div>
+          </div>
+          <div class="location-preview"></div>
+          <button class="boton-guardar">Guardar Registro</button>
+          <p class="nota">
+            * Information recorded is used for internal congregational support
+            only.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
